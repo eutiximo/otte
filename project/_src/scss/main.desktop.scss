@@ -1,0 +1,213 @@
+@import "inc/_vars.scss";
+
+html, body {
+    background-color: white;
+    font-family: $ff-openSans;
+    font-size: $fz-default;
+    font-weight: 500px;
+    overflow-x: hidden;
+}
+
+.nav-site {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    text-transform: uppercase;
+    
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0;
+        z-index: 1000;
+        background-color: white;
+        box-shadow: rgba(black, 0.3) 0 2px 5px;
+    }
+    
+    a {
+        color: $clr-text;
+        
+        &.act { font-weight: 900; }
+    }
+    
+    .logo img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100px;
+    }
+    
+    .links a {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 10px 20px;
+    }
+    
+    .lenguage a {
+        padding: 5px;
+    }
+}
+
+.main-site {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    position: relative;
+    overflow: hidden;
+    
+    & > .section {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        color: $clr-text;
+    }
+    
+    .footer {
+        background-color: $clr-text;
+        color: white;
+        padding: 5% 0;
+        
+        a { color: white; }
+        
+        .social-box {
+            & > a {
+                width: 100%;
+                max-width: 30px;
+                height: auto;
+                max-height: 50px;
+                margin: 0 20px;
+                
+                &:first-of-type { margin-left: 0px; }
+                &:last-of-type { margin-right: 0px; }
+                
+                &:hover { transform: scale(1.2); }
+                
+                & > svg {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    max-height: 50px;
+                    fill: white;
+                }
+            }
+        }
+        
+        .logo svg {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin: 0 0 0 auto;
+            
+            path { fill: white; }
+        }
+    }
+}
+
+#sec1 {
+    background-color: #e1e1e1;
+    
+    & > .container {
+        @include absoluteElem();
+    }
+    
+    .logo {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        transform: translate(-120%, -150%);
+    }
+}
+
+#sec2 {
+    
+    & > .row > div:nth-of-type(1) {
+        background-color: $clr-solider;
+        color: white;
+        padding: 7% 0;
+    }
+    
+    .orbs {
+        text-align: center;
+        
+        & > div {
+            display: inline-block;
+            vertical-align: middle;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid white;
+            position: relative;
+            margin: 0 10px;
+            
+            &:first-of-type { margin-left: 0; }
+            &:last-of-type { margin-right: 0; }
+            
+            &.fill {
+                background-color: white;
+                color: $clr-solider;
+            }
+            
+            span {
+                @include absoluteElem('center');
+            }
+        }
+    }
+}
+
+#sec3 {
+    padding: 10% 0;
+}
+
+#sec4 {
+    .colInfo  {
+        background-color: $clr-skin;
+        color: white;
+        padding: 7% 0;
+    }
+    
+    .legendText {
+        padding: 15% 0px;
+        
+        span { position: relative; }
+        span img {
+            position: absolute;
+            top: 100%;
+            left: 100%;
+            transform-origin: center center;
+            transform: translate(5%, -50%) rotate(180deg);
+            width: 120px;
+        }
+    }
+}
+
+#sec5 {
+    padding: 10% 0;
+    
+    .customers {
+        [include] {
+            &:nth-of-type(2) { padding-top: 20px; }
+            
+            svg {
+                display: block;
+                width: 80%;
+                height: auto;
+                max-height: 120px;
+                margin: 0 auto;
+
+                &, & g, & path {fill: $clr-text;}
+            }
+        }
+    }
+}

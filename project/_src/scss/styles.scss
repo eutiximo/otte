@@ -1,0 +1,16 @@
+@import "inc/_vars.scss";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import url("../libs/owl.carousel/assets/owl.carousel.css");
+@import url("../libs/owl.carousel/assets/owl.theme.default.css");
+
+@include fontWeightStock();
+@include fontSizes();
+@include widths();
+@include allPostionsElements();
+@include animTransitions((300ms, 500ms, 1s), "ease");
+
+@import "inc/owl-custom-themes.scss";

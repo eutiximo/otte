@@ -1,7 +1,6 @@
 var gulp = require('gulp'),
     pug = require('gulp-pug'),
     sass = require('gulp-sass'),
-    uglify = require('gulp-uglify'),
     include = require('gulp-include'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
@@ -79,9 +78,9 @@ gulp.task('browserSync', function () {
  * Funcion de los observadores
  */
 gulp.task('watchers', function () {
-    gulp.watch(projectPath + '**/*.pug', ['pug:compile']);
-    gulp.watch(projectPath + '**/*.js', ['js:compile']);
-    gulp.watch(projectPath + '**/*.scss', ['sass:compile']);
+    gulp.watch(projectPath + '_src/**/*.pug', ['pug:compile']);
+    gulp.watch(projectPath + '_src/**/*.js', ['js:compile']);
+    gulp.watch(projectPath + '_src/**/*.scss', ['sass:compile']);
 });
 
 /*

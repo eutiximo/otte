@@ -1,0 +1,80 @@
+.owl-skin-1 {
+    box-shadow: rgba(black, 0.2) 0 2px 5px;
+    
+    .item {
+        min-height: 100px;
+        
+        & > .content {
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 50px;
+            padding: 50px 30px;
+        }
+    }
+    
+    .owl-nav {
+        display: block;
+        width: 100%;
+        height: 0px;
+        @include absoluteElem("center");
+        opacity: 0;
+        
+        & > div {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $clr-silver;
+            box-shadow: rgba(black, 0.6) 0 2px 5px;
+            
+            &:hover {
+                background-color: $clr-concrete;
+            }
+            
+            &:before {
+                content: "";
+                display: block;
+                width: 20px;
+                height: 20px;
+                transform-origin: center center;
+                @include absoluteElem("center");
+                background-image: url($svg-angle);
+                background-position: center center;
+            }
+        }
+        
+        & .owl-prev {
+            @include absoluteElem("left-center");
+            left: 10px;
+            &:before { transform: translate(-50%, -50%) rotate(180deg); }
+        }
+        
+        & .owl-next {
+            @include  absoluteElem("right-center");
+            left: calc(100% - 10px);
+        }
+    }
+    &:hover .owl-nav {opacity: 1;}
+    
+    .owl-dots {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -150%);
+        text-align: center;
+        
+        & .owl-dot {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0px 10px;
+            border-radius: 50%;
+            background-color: $clr-silver;
+            
+            &.active { background-color: $clr-wet; }
+        }
+    }
+}

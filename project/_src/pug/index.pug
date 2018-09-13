@@ -1,0 +1,35 @@
+-var titleText = 'Otte | Inicio';
+-var currentPage = 'home';
+
+doctype
+html
+    head
+        include inc/index.head.pug
+    body
+        nav.nav-site
+            div.container.d-flex.justify-content-between.align-items-center
+                div.logo.hide: img(src="media/assets/logo.svg")
+                div.links
+                    a(href="#home").hide Inicio
+                    a(href="#aboutus") Nosotros
+                    a(href="#projects") Proyectos
+                    a(href="#customers") Clientes
+                    a(href="#contact") Contacto
+                div.lenguage
+                    a(href="#").act ES
+                    a(href="#") EN
+                
+        main.main-site
+            include inc/home/sec1.pug
+                
+            include inc/home/sec2.pug
+            
+            include inc/home/sec3.pug
+            
+            include inc/home/sec4.pug
+            
+            include inc/home/sec5.pug
+            
+            include inc/site.footer.pug
+        
+        include inc/index.script.pug

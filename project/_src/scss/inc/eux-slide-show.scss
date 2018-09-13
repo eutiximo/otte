@@ -1,0 +1,26 @@
+.eux-slideshow {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    position: relative;
+    border: 1px solid red;
+    
+    & > .content {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        
+        & > * {
+            display: block;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid red;
+        }
+    }
+}
